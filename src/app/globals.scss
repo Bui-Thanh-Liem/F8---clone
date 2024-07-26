@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "react-toastify/dist/ReactToastify.css";
+
+:root {
+    --color-grey-100: #f8f6f6;
+    --color-grey-200: #d2cfcf;
+    --color-grey-300: #aeabab;
+    //
+    // radius: 8px
+    // color: 600
+
+    //
+    --color-primary: #1677ff;
+    --color-second: #6daaf6;
+    --color-third: #cbd5e1;
+}
+
+// Dark mode
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+// Global in tailwind css
+@layer base {
+    * {
+        box-sizing: border-box;
+    }
+    html {
+        font-weight: 400;
+    }
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 5px;
+        background-color: var(--color-grey-100);
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px var(--color-grey-100);
+        border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--color-grey-200);
+        border-radius: 2px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--color-grey-300);
+    }
+}
